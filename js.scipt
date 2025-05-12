@@ -1,0 +1,9 @@
+// Função para mostrar um alerta de inscrição
+function inscreverWorkshop() {
+    alert("Você foi inscrito no workshop com sucesso!");
+}
+
+// Função para redirecionar o usuário para o fórum
+function acessarForum() {
+    window.location.href = "forum.html";
+}
