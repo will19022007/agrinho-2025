@@ -62,50 +62,62 @@
     </section>
     <link href="payment-form.css" rel="stylesheet" />
 <form></form>
-<h1>Campartilhe aqui seu conhecimento</h1>
-<p>
-  <strong><abbr title="required">*</abbr></strong
-  >.
-</p>
-<section>
-  <h2>Contact information</h2>
-  <fieldset>
-    <legend>Title</legend>
-    <ul>
-      <li>
-        <label for="title_1">
-          <input type="radio" id="title_1" name="title" value="M." />
-          Masculino
-        </label>
-      </li>
-      <li>
-        <label for="title_2">
-          <input type="radio" id="title_2" name="title" value="Ms." />
-          Feminino
-        </label>
-      </li>
-    </ul>
-  </fieldset>
-  <p>
-    <label for="name">
-      <span>Name: </span>
-      <strong><abbr title="required">*</abbr></strong>
-    </label>
-    <input type="text" id="name" name="username" />
-  </p>
-  <p>
-    <label for="mail">
-      <span>E-mail: </span>
-      <strong><abbr title="required">*</abbr></strong>
-    </label>
-    <input type="email" id="mail" name="usermail" />
-  </p>
-  <p>
-    <label for="pwd">
-<!-- So this: -->
-<div>
-  <!-- <label for="username">Escreva aqui</label> -->
-   <span>Compartilhei aqui sua resposta  </span>
-  <label for="username"><abbr title="required">*</abbr></label>
-  <input type="text" name="username">
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulário com JavaScript</title>
+</head>
+<body>
+  <form id="meuFormulario">
+    <h1>Compartilhe aqui seu conhecimento</h1>
+
+    <fieldset>
+      <legend>Título</legend>
+      <label>
+        <input type="radio" name="title" value="Masculino" /> Masculino
+      </label>
+      <label>
+        <input type="radio" name="title" value="Feminino" /> Feminino
+      </label>
+    </fieldset>
+
+    <p>
+      <label for="name">Nome: *</label>
+      <input type="text" id="name" name="name" required />
+    </p>
+
+    <p>
+      <label for="email">E-mail: *</label>
+      <input type="email" id="email" name="email" required />
+    </p>
+
+    <p>
+      <label for="Compartilhe sua resposta">Compartilhe sua resposta: *</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+    </p>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById("meuFormulario").addEventListener("submit", function (event) {
+      event.preventDefault(); // Impede o recarregamento da página
+
+      const titulo = document.querySelector('input[name="title"]:checked')?.value || "";
+      const nome = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      // Exemplo: Mostra os dados no console
+      console.log("Título:", titulo);
+      console.log("Nome:", nome);
+      console.log("Email:", email);
+      console.log("Mensagem:", mensagem);
+
+      // Aqui você pode enviar para um servidor com fetch/AJAX
+      alert("Formulário enviado com sucesso!");
+    });
+  </script>
+</body>
+</html>
