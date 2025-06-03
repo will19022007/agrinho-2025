@@ -1,80 +1,91 @@
-/* Resetando estilos padrões */
+/* Reset básico */
 * {
-    margin: 0;
+  margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+      box-sizing: border-box;
+      }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+      body {
+        font-family: 'Arial', sans-serif;
+          background-color: #F5F5F5; /* Fundo claro */
+            color: #333333; /* Texto escuro */
+              line-height: 1.6;
+              }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
+              /* Cabeçalho */
+              header {
+                background-color: #4CAF50; /* Verde natureza */
+                  padding: 20px;
+                    text-align: center;
+                      color: white;
+                      }
 
-header nav ul {
-    list-style: none;
-    margin-top: 10px;
-}
+                      header h1 {
+                        font-size: 2rem;
+                        }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+                        /* Navegação */
+                        nav {
+                          margin-top: 10px;
+                          }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+                          nav a {
+                            color: white;
+                              text-decoration: none;
+                                margin: 0 15px;
+                                  font-weight: bold;
+                                  }
 
-section {
-    padding: 2rem;
-    margin: 2rem 0;
-}
+                                  nav a:hover {
+                                    text-decoration: underline;
+                                    }
 
-h2 {
-    margin-bottom: 1rem;
-}
+                                    /* Seções principais */
+                                    section {
+                                      padding: 40px 20px;
+                                        max-width: 900px;
+                                          margin: auto;
+                                            background-color: white;
+                                              border-radius: 8px;
+                                                margin-top: 20px;
+                                                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+                                                  }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
+                                                  /* Títulos */
+                                                  h2 {
+                                                    color: #4CAF50;
+                                                      margin-bottom: 15px;
+                                                      }
 
-button:hover {
-    background-color: #45a049;
-}
+                                                      /* Botões */
+                                                      button, .btn {
+                                                        background-color: #66BB6A;
+                                                          color: white;
+                                                            padding: 10px 20px;
+                                                              border: none;
+                                                                border-radius: 6px;
+                                                                  cursor: pointer;
+                                                                    transition: background-color 0.3s ease;
+                                                                    }
 
-.produto, .workshop {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-}
+                                                                    button:hover, .btn:hover {
+                                                                      background-color: #388E3C;
+                                                                      }
 
-.produto h3, .workshop h3 {
-    font-size: 1.5rem;
-}
+                                                                      /* Produtos, cards ou blocos especiais */
+                                                                      .card {
+                                                                        background-color: #B3E5FC; /* Azul leve tech */
+                                                                          border-left: 6px solid #0288D1;
+                                                                            padding: 15px;
+                                                                              margin-top: 20px;
+                                                                                border-radius: 5px;
+                                                                                }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-}
-
-footer p {
-    font-size: 0.8rem;
-}
+                                                                                /* Rodapé */
+                                                                                footer {
+                                                                                  background-color: #8D6E63; /* Tom terroso */
+                                                                                    color: white;
+                                                                                      padding: 20px;
+                                                                                        text-align: center;
+                                                                                          margin-top: 40px;
+                                                                                          }
