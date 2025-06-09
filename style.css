@@ -13,36 +13,37 @@
               }
 
               /* Cabeçalho */
-              header {
-                background-color: #4CAF50; /* Verde natureza */
-                  padding: 20px;
-                    text-align: center;
-                      color: white;
-                      }
+             .cabecalho {
+    background-image: url("img-fundo.png");
+    background-color: rgb(216, 195, 10);
+    color: rgba(0, 0, 0, 0.726);
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+}
+  header h1 {
+  font-size: 2rem;
+  }
 
-                      header h1 {
-                        font-size: 2rem;
-                        }
+  /* Navegação */
+   nav {
+ margin-top: 10px;
+    }
 
-                        /* Navegação */
-                        nav {
-                          margin-top: 10px;
-                          }
+   nav a {
+color: white;
+ text-decoration: none;
+ margin: 0 15px;
+ font-weight: bold;
+ }
 
-                          nav a {
-                            color: white;
-                              text-decoration: none;
-                                margin: 0 15px;
-                                  font-weight: bold;
-                                  }
+  nav a:hover {
+  text-decoration: underline;
+ }
 
-                                  nav a:hover {
-                                    text-decoration: underline;
-                                    }
-
-                                    /* Seções principais */
-                                    section {
-                                      padding: 40px 20px;
+  /* Seções principais */
+   section {
+  padding: 40px 20px;
                                         max-width: 900px;
                                           margin: auto;
                                             background-color: white;
@@ -69,8 +70,8 @@
                                                                     }
 
                                                                     button:hover, .btn:hover {
-                                                                      background-color: #388E3C;
-                                                                      }
+           background-color: #388E3C;
+     }
 
                                                                       /* Produtos, cards ou blocos especiais */
                                                                       .card {
@@ -125,5 +126,4 @@
 
                                                                                                                                 nav a:hover {
                                                                                                                                   text-decoration: underline;
-                                                        
-                                                                          
+}
