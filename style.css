@@ -1,129 +1,318 @@
 /* Reset básico */
 * {
-  margin: 0;
+    margin: 0;
     padding: 0;
-      box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Arial', sans-serif;
-          background-color: #F5F5F5; /* Fundo claro */
-            color: #333333; /* Texto escuro */
-              line-height: 1.6;
-              }
-
-              /* Cabeçalho */
-             .cabecalho {
-    background-image: url("img-fundo.png");
-    background-color: rgb(216, 195, 10);
-    color: rgba(0, 0, 0, 0.726);
-    display: flex;
-    justify-content: space-around;
-    padding: 24px 0;
+    box-sizing: border-box;
 }
-  header h1 {
-  font-size: 2rem;
-  }
 
-  /* Navegação */
-   nav {
- margin-top: 10px;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.logo p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #cce6cc;
+}
+
+/* Seções principais */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+#produtos-artesanais .produto {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Fórum */
+#forum button a {
+    color: white;
+}
+
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-   nav a {
-color: white;
- text-decoration: none;
- margin: 0 15px;
- font-weight: bold;
- }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  nav a:hover {
-  text-decoration: underline;
- }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
 
-  /* Seções principais */
-   section {
-  padding: 40px 20px;
-                                        max-width: 900px;
-                                          margin: auto;
-                                            background-color: white;
-                                              border-radius: 8px;
-                                                margin-top: 20px;
-                                                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-                                                  }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-                                                  /* Títulos */
-                                                  h2 {
-                                                    color: #4CAF50;
-                                                      margin-bottom: 15px;
-                                                      }
+ul {
+    list-style: none;
+}
 
-                                                      /* Botões */
-                                                      button, .btn {
-                                                        background-color: #66BB6A;
-                                                          color: white;
-                                                            padding: 10px 20px;
-                                                              border: none;
-                                                                border-radius: 6px;
-                                                                  cursor: pointer;
-                                                                    transition: background-color 0.3s ease;
-                                                                    }
+/* Cabeçalho */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-                                                                    button:hover, .btn:hover {
-           background-color: #388E3C;
-     }
+header h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
 
-                                                                      /* Produtos, cards ou blocos especiais */
-                                                                      .card {
-                                                                        background-color: #B3E5FC; /* Azul leve tech */
-                                                                          border-left: 6px solid #0288D1;
-                                                                            padding: 15px;
-                                                                              margin-top: 20px;
-                                                                                border-radius: 5px;
-                                                                                }
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
-                                                                                /* Rodapé */
-                                                                                footer {
-                                                                                  background-color: #8D6E63; /* Tom terroso */
-                                                                                    color: white;
-                                                                                      padding: 20px;
-                                                                                        text-align: center;
-                                                                                          margin-top: 40px;
-                                                                                          }
-                                                                                          header {
-                                                                                              background-color: #4CAF50;
-                                                                                                padding: 20px;
-                                                                                                  display: flex;
-                                                                                                    justify-content: space-between;
-                                                                                                      align-items: center;
-                                                                                                        flex-wrap: wrap;
-                                                                                                        }
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-                                                                                                        header h1 {
-                                                                                                          color: white;
-                                                                                                            margin: 0;
-                                                                                                              font-size: 24px;
-                                                                                                              }
+nav ul li a:hover {
+    color: #c8e6c9;
+}
 
-                                                                                                              header p {
-                                                                                                                color: white;
-                                                                                                                  margin: 0;
-                                                                                                                    font-size: 14px;
-                                                                                                                    }
+/* Seções */
+.section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-                                                                                                                    /* Menu de navegação */
-                                                                                                                    nav {
-                                                                                                                      display: flex;
-                                                                                                                        gap: 15px;
-                                                                                                                          margin-top: 10px;
-                                                                                                                          }
+.section h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
 
-                                                                                                                          nav a {
-                                                                                                                            color: white;
-                                                                                                                              text-decoration: none;
-                                                                                                                                font-weight: bold;
-                                                                                                                                }
+.section p {
+    margin-bottom: 15px;
+}
 
-                                                                                                                                nav a:hover {
-                                                                                                                                  text-decoration: underline;
+/* Produtos */
+.produto {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+.produto h3 {
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #2e7d32;
+}
+
+/* Formulário */
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2e7d32;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #1b5e20;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section,
+    form {
+        margin: 20px;
+        padding: 15px;
+    }
 }
