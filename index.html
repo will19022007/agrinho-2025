@@ -40,11 +40,9 @@
             <button>Comprar</button>
         </div>
         <div class="produto">
-            <h3>Produto 2</h3>
-            <p>Descrição do produto</p>
-            <button>Comprar</button>
-        </div>
-        <!-- Mais produtos aqui -->
+            <h3>Ovos Orgânicos 10 unidades - Raízs</h3>
+            <p>Produzidos por galinhas criadas livres, com alimentação 100% natural e sem uso de hormônios ou antibióticos.</p>
+            <a href=https://www.raizs.com.br/ovos-organicos-10-unidades-raizs/p?queryID=products_best_sellers__4c6d540640207b2fda3f2134c1bef015><button>Comprar</button>
     </section>
 
     <!-- Fórum -->
@@ -55,16 +53,24 @@
     </section>
 
     <!-- Contato -->
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
-        <form action="#">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem..."></textarea>
-            <button type="submit">Enviar</button>
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+    <form id="contatoForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem..." required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <!-- Mensagem de confirmação -->
+        <p id="mensagemFeedback" style="color: green; font-weight: bold; margin-top: 10px;"></p>
+    </form>
+</section>
         </form>
     </section>
 
@@ -74,5 +80,24 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    const contatoForm = document.getElementById('contatoForm');
+    const mensagemFeedback = document.getElementById('mensagemFeedback');
+
+    contatoForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Exibe mensagem de sucesso + agradecimento
+        mensagemFeedback.textContent = 'Mensagem enviada com sucesso! Agradecemos pelo seu contato.';
+
+        // Limpa os campos
+        contatoForm.reset();
+
+        // Remove a mensagem depois de 3 segundos
+        setTimeout(() => {
+            mensagemFeedback.textContent = '';
+        }, 3000);
+    });
+</script>
 </body>
 </html>

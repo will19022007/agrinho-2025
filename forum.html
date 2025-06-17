@@ -1,122 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum - ConectaRural</title>
     <link rel="stylesheet" href="style.css">
-    <title>Vida no Campo e Suas Tecnologias</title>
+    <style>
+        .forum-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .post-form, .post {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .post h4 {
+            margin: 0 0 10px;
+        }
+        #feedback-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Vida no Campo e Suas Tecnologias</h1>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>ConectaRural</h1>
+            <p>Conexão Campo e Cidade</p>
+        </div>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#conteudo">Conteúdo</a></li>
-                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#produtos-artesanais">Produtos Artesanais</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
             </ul>
-        </nav>
+        </nav>   
     </header>
 
-    <section id="sobre" class="section">
-        <h2>Sobre o Artigo</h2>
-        <p>
-            A vida no campo sempre esteve associada à tranquilidade e ao contato direto com a natureza. No entanto, com o avanço das tecnologias, o cenário rural está passando por transformações que integram tradição e modernidade.
-        </p>
-    </section>
+    <div class="forum-container">
+        <h2>Fórum de Discussões</h2>
+        <p>Compartilhe suas ideias, dúvidas ou experiências.</p>
 
-    <section id="conteudo" class="section">
-        <h2>A Convivência entre o Tradicional e o Moderno</h2>
-        <p>
-            A inclusão de tecnologias agrícolas, como tratores inteligentes e sistemas automatizados, tem otimizado tarefas diárias sem perder a essência das práticas tradicionais.
-        </p>
+        <form class="post-form" id="postForm">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
 
-        <h2>Conectividade e Inclusão Digital</h2>
-        <p>
-            A expansão do acesso à internet nas áreas rurais criou novas oportunidades para os pequenos produtores, que agora podem comercializar seus produtos online.
-        </p>
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo" required><br><br>
 
-        <h2>Sustentabilidade e Tecnologia</h2>
-        <p>
-            Muitas iniciativas tecnológicas visam preservar o meio ambiente, utilizando recursos de forma consciente e sustentável.
-        </p>
-    </section>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
 
-    <section id="produtos" class="section">
-        <h2>Produtos</h2>
+            <button type="submit">Publicar</button>
 
-        <div class="produto">
-            <h3>Trator Inteligente</h3>
-            <p>Equipamento agrícola automatizado com GPS integrado para otimizar a colheita.</p>
-            <button>Saiba Mais</button>
+            <!-- Mensagem de confirmação -->
+            <p id="feedback-message"></p>
+        </form>
+
+        <div id="postsContainer">
+            <!-- Mensagens aparecerão aqui -->
         </div>
+    </div>
 
-        <div class="produto">
-            <h3>Sistema de Irrigação Automatizado</h3>
-            <p>Sistema de controle hídrico com sensores de umidade para economizar água.</p>
-            <button>Saiba Mais</button>
-        </div>
-    </section>
-    <link href="payment-form.css" rel="stylesheet" />
-<form></form>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Formulário com JavaScript</title>
-</head>
-<body>
-  <form id="meuFormulario">
-    <h1>Compartilhe aqui seu conhecimento</h1>
+    <footer>
+        <p>&copy; 2025 ConectaRural - Todos os direitos reservados.</p>
+    </footer>
 
-    <fieldset>
-      <legend>Genero</legend>
-      <label>
-        <input type="radio" name="title" value="Masculino" /> Masculino
-      </label>
-      <label>
-        <input type="radio" name="title" value="Feminino" /> Feminino
-      </label>
-    </fieldset>
+    <script>
+        const postForm = document.getElementById('postForm');
+        const postsContainer = document.getElementById('postsContainer');
+        const feedbackMessage = document.getElementById('feedback-message');
 
-    <p>
-      <label for="name">Nome: *</label>
-      <input type="text" id="name" name="name" required />
-    </p>
+        postForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    <p>
-      <label for="email">E-mail: *</label>
-      <input type="email" id="email" name="email" required />
-    </p>
+            const nome = document.getElementById('nome').value;
+            const titulo = document.getElementById('titulo').value;
+            const mensagem = document.getElementById('mensagem').value;
 
-    <p>
-      <label for="Compartilhe sua resposta">Compartilhe sua resposta: *</label>
-      <textarea id="mensagem" name="mensagem" required></textarea>
-    </p>
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `
+                <h4>${titulo}</h4>
+                <p><strong>${nome} diz:</strong></p>
+                <p>${mensagem}</p>
+            `;
 
-    <button type="submit">Enviar</button>
-  </form>
+            postsContainer.prepend(postElement);
+            postForm.reset();
 
-  <script>
-    document.getElementById("meuFormulario").addEventListener("submit", function (event) {
-      event.preventDefault(); // Impede o recarregamento da página
+            // Mostrar mensagem de sucesso
+            feedbackMessage.textContent = 'Mensagem publicada com sucesso!';
 
-      const titulo = document.querySelector('input[name="title"]:checked')?.value || "";
-      const nome = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const mensagem = document.getElementById("mensagem").value;
+            // Esconder após 3 segundos
+            setTimeout(() => {
+                feedbackMessage.textContent = '';
+            }, 3000);
+        });
+    </script>
 
-      // Exemplo: Mostra os dados no console
-      console.log("Título:", titulo);
-      console.log("Nome:", nome);
-      console.log("Email:", email);
-      console.log("Mensagem:", mensagem);
-
-      // Aqui você pode enviar para um servidor com fetch/AJAX
-      alert("Formulário enviado com sucesso!");
-    });
-  </script>
 </body>
 </html>
