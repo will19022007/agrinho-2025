@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#produtos-artesanais">produtos-artesanais</a></li>
+                <li><a href="#produtos-artesanais">Produtos Artesanais</a></li>
                 <li><a href="#forum">Fórum</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -26,28 +26,26 @@
     <!-- Seção Home -->
     <section id="home">
         <h2>Bem-vindo ao ConectaRural</h2>
-        <p>Explore a conexão entre o campo e a cidade. Aqui você pode comprar produtos locais,e trocar saberes com pessoas de diferentes realidades.</p>
-        <button onclick="window.location.href='#produtos-artesanais'">Explorar produtos-artesanais</button>
+        <p>Explore a conexão entre o campo e a cidade. Aqui você pode comprar produtos locais e trocar saberes com pessoas de diferentes realidades.</p>
+        <button onclick="window.location.href='#produtos-artesanais'">Explorar Produtos Artesanais</button>
     </section>
 
-  <!-- produtos-artesanais -->
-<section id="produtos-artesanais">
-    <h2>Produtos Artesanais</h2>
-    <p>Encontre aqui links de sites para comprar produtos artesanais vindos direto do campo.</p>
-    
-    <div class="produto">
-        <h3>Banana Prata Orgânica 650g - Raízs</h3>
-        <p>Sabor suave, textura firme e cultivo 100% orgânico, sem agrotóxicos.</p>
-        <a href="https://raizs.com.br/produto/banana-prata-organica-650g" target="_blank">Comprar</a>
-    </div>
-</section>
-
+    <!-- Produtos Artesanais -->
+    <section id="produtos-artesanais">
+        <h2>Produtos Artesanais</h2>
+        <p>Encontre aqui links de sites para comprar produtos artesanais vindos direto do campo.</p>
+        
+        <div class="produto">
+            <h3>Banana Prata Orgânica 650g - Raízs</h3>
+            <p>Sabor suave, textura firme e cultivo 100% orgânico, sem agrotóxicos.</p>
+            <a href="https://www.raizs.com.br/banana-prata-organica/p?queryID=products__e9f9892f8f63f00461d26ebfe4abe9fd" target="_blank">Comprar</a>
         </div>
+
         <div class="produto">
             <h3>Ovos Orgânicos 10 unidades - Raízs</h3>
             <p>Produzidos por galinhas criadas livres, com alimentação 100% natural e sem uso de hormônios ou antibióticos.</p>
-        
-    
+            <a href="https://www.raizs.com.br/ovos-organicos-10-unidades-raizs/p?queryID=products__448a5b4c78f3fefe525951322009acd2" target="_blank">Comprar</a>
+        </div>
     </section>
 
     <!-- Fórum -->
@@ -58,24 +56,22 @@
     </section>
 
     <!-- Contato -->
-<section id="contato">
-    <h2>Contato</h2>
-    <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
-    <form id="contatoForm">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+        <form id="contatoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem..." required></textarea>
+            <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem..." required></textarea>
 
-        <button type="submit">Enviar</button>
+            <button type="submit">Enviar</button>
 
-        <!-- Mensagem de confirmação -->
-        <p id="mensagemFeedback" style="color: green; font-weight: bold; margin-top: 10px;"></p>
-    </form>
-</section>
+            <!-- Mensagem de confirmação -->
+            <p id="mensagemFeedback" style="color: green; font-weight: bold; margin-top: 10px;"></p>
         </form>
     </section>
 
@@ -84,6 +80,7 @@
         <p>&copy; 2025 ConectaRural - Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Script -->
     <script src="script.js"></script>
     <script>
     const contatoForm = document.getElementById('contatoForm');
@@ -91,18 +88,12 @@
 
     contatoForm.addEventListener('submit', function(event) {
         event.preventDefault();
-
-        // Exibe mensagem de sucesso + agradecimento
         mensagemFeedback.textContent = 'Mensagem enviada com sucesso! Agradecemos pelo seu contato.';
-
-        // Limpa os campos
         contatoForm.reset();
-
-        // Remove a mensagem depois de 3 segundos
         setTimeout(() => {
             mensagemFeedback.textContent = '';
         }, 3000);
     });
-</script>
+    </script>
 </body>
 </html>

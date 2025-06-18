@@ -94,6 +94,14 @@ button:hover {
     margin-bottom: 20px;
     border-radius: 10px;
 }
+.botao-comprar {
+    background-color: #28a745; /* cor de fundo verde */
+    color: white;              /* cor do texto */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
 /* Fórum */
 #forum button a {
